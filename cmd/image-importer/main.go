@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	lib "../../lib"
+	lib "github.com/j6s/image-importer/lib"
 
 	"github.com/mostlygeek/go-exiftool"
 )

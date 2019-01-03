@@ -10,7 +10,7 @@ import (
 	"strings"
 	"text/template"
 
-	lib "../../lib"
+	lib "github.com/j6s/image-importer/lib"
 )
 
 type Settings struct {
