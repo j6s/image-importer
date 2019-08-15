@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"os"
 	"path"
 	"strings"
 
@@ -27,8 +28,9 @@ type FileProperties struct {
 
 func main() {
 	settings := parseSettings()
-	fmt.Printf("Importing images using %d workers\n", settings.Workers)
+	abortIfBlacklistNotWritable(settings)
 
+	fmt.Printf("Importing images using %d workers\n", settings.Workers)
 	imported := 0
 	lib.WorkerPool(
 		func(file string) {
@@ -44,7 +46,10 @@ func main() {
 		settings.Workers,
 	)
 
-	lib.WriteLinesToFile(settings.BlacklistPath, settings.Blacklist)
+	err := lib.WriteLinesToFile(settings.BlacklistPath, settings.Blacklist)
+	if err != nil {
+		log.Fatalf("Error writing blacklist for next run: %s", err.Error())
+	}
 	log.Printf("Imported %d images", imported)
 }
 
@@ -81,4 +86,12 @@ func doCopyFile(before string, settings *Settings) bool {
 		settings.Blacklist = append(settings.Blacklist, path.Base(before))
 	}
 	return copied
+}
+
+func abortIfBlacklistNotWritable(settings Settings) {
+	file, err := os.OpenFile(settings.BlacklistPath, os.O_WRONLY, 0644)
+	if err != nil {
+		log.Fatalf("Error opening blacklist file: %#v", err.Error())
+	}
+	file.Close()
 }
