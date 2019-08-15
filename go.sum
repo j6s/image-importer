@@ -1,0 +1,10 @@
+github.com/bradfitz/latlong v0.0.0-20170410180902-f3db6d0dff40 h1:wsnz4B2CSHJ09pwtMReU/GRqWDsI7XSasq7Nphem3Xk=
+github.com/bradfitz/latlong v0.0.0-20170410180902-f3db6d0dff40/go.mod h1:ZcXX9BndVQx6Q/JM6B8x7dLE9sl20S+TQsv4KO7tEQk=
+github.com/buger/jsonparser v0.0.0-20181115193947-bf1c66bbce23 h1:D21IyuvjDCshj1/qq+pCNd3VZOAEI9jy6Bi131YlXgI=
+github.com/buger/jsonparser v0.0.0-20181115193947-bf1c66bbce23/go.mod h1:bbYlZJ7hK1yFx9hf58LP0zeX7UjIGs20ufpu3evjr+s=
+github.com/mostlygeek/go-exiftool v0.0.0-20180326005649-08f6df6ad733 h1:/PaHJqku9DfAaDOV1MfBRnkpffqhBZWlG5+F5bvg5IM=
+github.com/mostlygeek/go-exiftool v0.0.0-20180326005649-08f6df6ad733/go.mod h1:mOGy+bOASZ5xMFNYY1R1M28S08g25m28bh87SufC6qY=
+github.com/mostlygeek/go-exiftool v0.0.0-20190130212521-a0e5de16f760 h1:qUtbT+7TAoHfNzm77auokRLOhS3+CQmauMhxgiq24CM=
+github.com/mostlygeek/go-exiftool v0.0.0-20190130212521-a0e5de16f760/go.mod h1:mOGy+bOASZ5xMFNYY1R1M28S08g25m28bh87SufC6qY=
+github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
